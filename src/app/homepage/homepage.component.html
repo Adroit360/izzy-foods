@@ -1,0 +1,50 @@
+<main class="min-h-screen w-full pb-8 font-montserrat bg-[#eaecf0]">
+  <header
+    class="w-full fixed z-10 flex gap-10 items-center px-8 py-4 bg-[#F71579]"
+  >
+    <div class="flex-grow">my logo</div>
+    <div class="relative flex-grow flex items-center justify-center">
+      <div
+        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+      >
+        <svg
+          class="w-5 h-5 text-gray-500 dark:text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          ></path>
+        </svg>
+      </div>
+      <input
+        type="search"
+        id="default-search"
+        class="block p-4 pl-10 w-full text-sm text-gray-900 bg-white rounded-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+        placeholder="Search in restaurants..."
+        [ngModel]="searchTerm"
+        (ngModelChange)="onSearch($event)"
+        required
+      />
+    </div>
+  </header>
+  <section class="flex flex-col px-4 sm:px-10 gap-8 pt-28">
+    <h1 class="text-3xl font-montserrat font-bold capitalize">
+      All restaurants
+    </h1>
+    <div class="flex-grow h-full w-full">
+      <div class="grid grid-cols-restaurant items-center gap-6">
+        <app-restaurant-card
+          *ngFor="let item of restaurants"
+          [restaurant]="item"
+        ></app-restaurant-card>
+      </div>
+    </div>
+  </section>
+  <app-scroll-to-top></app-scroll-to-top>
+</main>

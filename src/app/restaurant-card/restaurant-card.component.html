@@ -1,0 +1,17 @@
+<div
+  class="border flex-grow w-full cursor-pointer font-montserrat min-w-0 shadow-outline bg-white rounded-xl overflow-hidden"
+  (click)="onClick(restaurant.websiteUrl)"
+>
+  <div
+    class="min-h-[14rem] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
+    style="
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url('{{ restaurant.imageUrl }}');
+    "
+  ></div>
+  <div class="h-full min-h-[4rem] px-3 flex items-center w-full">
+    <p class="text-black font-semibold text-xl capitalize">
+      {{ restaurant.name }}
+    </p>
+  </div>
+</div>

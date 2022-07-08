@@ -1,0 +1,14 @@
+<div
+  class="fixed bottom-8 right-4 opacity-0 transition-all duration-200 w-12 h-12 bg-[#f93154] shadow-lg overflow-hidden rounded-full cursor-pointer"
+  [ngClass]="{ 'show-scrollTop': windowScrolled }"
+>
+  <button
+    type="button"
+    class="w-full h-full bg-transparent border-none text-white text-lg"
+    data-toggle="button"
+    aria-pressed="true"
+    (click)="scrollToTop()"
+  >
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</div>
