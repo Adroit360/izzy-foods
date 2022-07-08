@@ -37,39 +37,10 @@
     </h1>
     <div class="flex-grow h-full w-full">
       <div class="grid grid-cols-restaurant gap-6">
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card
-        ><app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card>
-        <app-restaurant-card></app-restaurant-card
-        ><app-restaurant-card></app-restaurant-card>
+        <app-restaurant-card
+          *ngFor="let item of restaurants"
+          [restaurant]="item"
+        ></app-restaurant-card>
       </div>
     </div>
   </section>
