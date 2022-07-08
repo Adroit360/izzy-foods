@@ -9,6 +9,9 @@ module.exports = {
       boxShadow: {
         outline: "0 0.5rem 1.5rem hsl(210deg 8% 62% / 20%)",
       },
+      gridTemplateColumns: {
+        restaurant: "repeat(auto-fit, minmax(300px, 1fr))",
+      },
     },
   },
   plugins: [],
