@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-restaurant-card',
   templateUrl: './restaurant-card.component.html',
-  styleUrls: ['./restaurant-card.component.scss']
+  styleUrls: ['./restaurant-card.component.scss'],
 })
 export class RestaurantCardComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  onClick(url: string) {
+    // open a new window with the url
+    window.open(url, '_blank');
   }
-
 }
