@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RestaurantCardComponent } from './restaurant-card/restaurant-card.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    RestaurantCardComponent
+    RestaurantCardComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
