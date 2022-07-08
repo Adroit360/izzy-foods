@@ -27,16 +27,18 @@
         id="default-search"
         class="block p-4 pl-10 w-full text-sm text-gray-900 bg-white rounded-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         placeholder="Search in restaurants..."
+        [ngModel]="searchTerm"
+        (ngModelChange)="onSearch($event)"
         required
       />
     </div>
   </header>
-  <section class="flex flex-col px-10 gap-8 pt-28">
+  <section class="flex flex-col px-4 sm:px-10 gap-8 pt-28">
     <h1 class="text-3xl font-montserrat font-bold capitalize">
       All restaurants
     </h1>
     <div class="flex-grow h-full w-full">
-      <div class="grid grid-cols-restaurant gap-6">
+      <div class="grid grid-cols-restaurant items-center gap-6">
         <app-restaurant-card
           *ngFor="let item of restaurants"
           [restaurant]="item"

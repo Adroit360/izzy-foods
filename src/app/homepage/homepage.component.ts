@@ -22,6 +22,7 @@ export class HomepageComponent implements OnInit {
 
   restaurnats$: Observable<Restaurant[]>;
   restaurants: Restaurant[] = [];
+  searchTerm = '';
 
   ngOnInit(): void {}
 
@@ -31,5 +32,9 @@ export class HomepageComponent implements OnInit {
 
   onSearchRestaurants(searchTerm: string) {
     this.restaurants = this.restaurantService.searchRestaurants(searchTerm);
+  }
+
+  onSearch(event: any) {
+    this.onSearchRestaurants(event);
   }
 }
